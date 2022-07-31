@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+
+    </data>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <ImageView
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:src="@drawable/ic_baseline_camera_24"
+            android:layout_margin="20dp"
+            android:id="@+id/cameraclick"/>
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/textclick"
+            android:text="Click on icon to Capture Image"
+            android:layout_toRightOf="@+id/cameraclick"
+            android:layout_alignTop="@id/cameraclick"
+            android:gravity="center_vertical"
+            android:textSize="18sp"
+            android:textStyle="bold"
+            android:layout_marginBottom="20dp"
+            android:layout_marginRight="20dp"/>
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:background="@color/icPressed"
+            android:id="@+id/galleryGridView"
+            android:layout_below="@id/cameraclick"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"/>
+
+        <TextView
+            android:id="@+id/emptyview"
+            android:visibility="gone"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:text="No Album Found"
+            android:textSize="20sp"
+            android:gravity="center"
+            android:textStyle="bold"/>
+
+
+    </RelativeLayout>
+</layout>
